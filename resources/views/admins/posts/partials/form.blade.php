@@ -75,6 +75,7 @@
 @section('scripts')
 <script type="text/javascript" src="{{asset('vendor/toSlug/jquery.stringtoslug.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('vendor/speakingurl/speakingurl.js')}}"></script>
+<script type="text/javascript" src="{{asset('vendor/ckeditor/ckeditor.js')}}"></script>
 <script type="text/javascript">
 $(document).ready(function(){
   $("#name, #slug").stringToSlug({
@@ -82,6 +83,10 @@ $(document).ready(function(){
       $("#slug").val(text);
     }
   });
+
+  CKEDITOR.config.height = 400;
+  CKEDITOR.config.width = 'auto';
+  CKEDITOR.replace('body');
 });
 </script>
 @endsection
