@@ -23,19 +23,9 @@ class PostUpdateRequest extends FormRequest
      */
     public function rules()
     {
-      $rules = [
-          'name'        => 'required',
-          'slug'        => 'required|unique:posts,slug,'. $this->post,
-          'user_id'     => 'required|integer',
-          'category_id' => 'required|integer',
-          'body'        => 'required',
-          'tags'        => 'required|array',
-          'status'      => 'required|in:PUBLISHED,DRAFT',
+      return [
+          'name' => 'required',
+          'slug' => 'required|unique:posts,slug,'. $this->post,
       ];
-      if($this->get('file'))
-      {
-        $rules = array_marge($rules, ['file' => 'mimes:jpg,jpeg,png']);
-      }
-      return $rules;
     }
 }
