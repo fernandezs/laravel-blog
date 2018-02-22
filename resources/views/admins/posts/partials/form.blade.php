@@ -27,22 +27,22 @@
   @endif
 </div>
 <div class="form-group">
-  {!! Form::label('file', 'Imagen:')!!}
-  {!! Form::file('file')!!}
-  @if ($errors->has('file'))
-      <span class="help-block">
-          <strong>{{ $errors->first('file') }}</strong>
-      </span>
-  @endif
+    {!! Form::label('file', 'Imagen:')!!}
+    {!! Form::file('file')!!}
+    @if ($errors->has('file'))
+        <span class="help-block">
+            <strong>{{ $errors->first('file') }}</strong>
+        </span>
+    @endif
 </div>
 <div class="form-group">
   {!! Form::label('status', 'Estado:')!!}
   <br>
   <label>
-    {!! Form::radio('estatus', 'PUBLISHED')!!} Publicado
+    {!! Form::radio('status', 'PUBLISHED')!!} Publicado
   </label>
   <label>
-    {!! Form::radio('estatus', 'DRAFT')!!} Borrador
+    {!! Form::radio('status', 'DRAFT')!!} Borrador
   </label>
 </div>
 <div class="form-group">
@@ -86,7 +86,7 @@ $(document).ready(function(){
 
   CKEDITOR.config.height = 400;
   CKEDITOR.config.width = 'auto';
-  CKEDITOR.replace('body');
+  CKEDITOR.treplace('body');
 });
 </script>
 @endsection

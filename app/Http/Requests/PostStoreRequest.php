@@ -32,10 +32,11 @@ class PostStoreRequest extends FormRequest
             'tags'        => 'required|array',
             'status'      => 'required|in:PUBLISHED,DRAFT',
         ];
+        /*
         if($this->get('file'))
         {
           $rules = array_merge($rules, ['file' => 'mimes:jpg,jpeg,png']);
-        }
+        }*/
         return $rules;
     }
 }

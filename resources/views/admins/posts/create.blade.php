@@ -9,7 +9,7 @@
             Crear Entrada
           </div>
           <div class="panel-body">
-            {!! Form::open(['route' => ['posts.store'], 'method' => 'POST'])!!}
+            {!! Form::open(['route' => ['posts.store', 'files' => 'true'], 'method' => 'POST', 'enctype' => 'multipart/form-data'])!!}
               @include('admins.posts.partials.form')
             {!! Form::close()!!}
           </div>
