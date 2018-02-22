@@ -6,7 +6,7 @@
     <div class="col-md-8 col-md-offset-2">
         <div class="panel panel-default">
           <div class="panel-heading">
-            Lista de categorias
+            Lista de entradas
             <a href="{{ route('posts.create')}}" class="btn btn-primary btn-sm pull-right">Crear</a>
           </div>
           <div class="panel-body">

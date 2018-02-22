@@ -6,7 +6,7 @@
     <div class="col-md-8 col-md-offset-2">
         <div class="panel panel-default">
           <div class="panel-heading">
-            Editar Etiqueta
+            Editar etiqueta
           </div>
           <div class="panel-body">
             {!! Form::model($tag, ['route' => ['tags.update', $tag->id], 'method' => 'PUT'])!!}
